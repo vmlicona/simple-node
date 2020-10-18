@@ -19,5 +19,5 @@ script:
   - docker tag simple-node vmlicona/simple-node:latest
 
 after_success:
-  - echo d5g4buun4m | docker login -u vmlicona --password-stdin
+  - echo %DOCKER_PASSWORD% | docker login -u %DOCKER_USERNAME% --password-stdinn
   - docker push vmlicona/simple-node
